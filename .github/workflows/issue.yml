@@ -10,6 +10,5 @@ jobs:
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           ignore-comments: true
-          labels-synonyms:  '{"gssoc2021":["GSSOC","GSSOC21","gssoc","Gssoc","GSSoC","gssoc21","gssoc2021","GSSOC2021"]}'
-          labels-not-allowed: '["good first issue"]'
-          default-labels: '["gssoc21"]'
+          labels-synonyms:  '{"hacktoberfest":["HACKTOBER","HACTOBERFEST21","HACTOBERFEST21","hactober","hactoberfest21","hactoberfest","hack","october"]}'
+          default-labels: '["good first issue", "hactoberfest"]'
