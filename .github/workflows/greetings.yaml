@@ -1,12 +1,13 @@
-name: "PR Greeter"
-on: [pull_request]
+name: "Greetings"
+on: [pull_request, issues]
 
 jobs:
-  pr-greeter:
+  greeting:
     runs-on: ubuntu-latest
     steps:
       - name: "Greeter"
-        uses: JJ/pr-greeting-action@releases/v1
+        uses: vactions/first-interaction@v1
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-          greeting: "Hey **#** welcome to this repo"
+          issue-message: 'Hello @${{ github.actor }}, Thank you for generating an issue to this project! Please wait while we get back to you.'
+          pr-message: 'Hello @${{ github.actor }}, We love Pull Requests! Thank you for contributing.'
