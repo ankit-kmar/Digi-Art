@@ -1,13 +1,18 @@
-name: "Greetings"
-on: [pull_request, issues]
+on:
+  issues:
+    types: [opened]
 
 jobs:
-  greeting:
+  comment:
     runs-on: ubuntu-latest
     steps:
-      - name: "Greeter"
-        uses: vactions/first-interaction@v1
+      - uses: actions/github-script@v3
         with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          issue-message: 'Hello @${{ github.actor }}, Thank you for generating an issue to this project! Please wait while we get back to you.'
-          pr-message: 'Hello @${{ github.actor }}, We love Pull Requests! Thank you for contributing.'
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            github.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '👋 Thanks for reporting!'
+            })
