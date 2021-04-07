@@ -1,6 +1,7 @@
 name: Greetings
 
 on: [pull_request, issues_comment]
+types: [created, edited]
 
 jobs:
   greeting:
