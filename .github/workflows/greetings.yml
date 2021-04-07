@@ -1,14 +1,15 @@
-name: Greetings
-
-on: [pull_request, issues_comment]
-types: [created, edited]
+name: Add to Contributors
+on:
+  push:
+    branches:
+    - master
 
 jobs:
-  greeting:
+  comment:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/first-interaction@v1
-      with:
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
-        issue-message: 'Hello @${{ github.actor }}, Thank you for generating an issue to this project! Please wait while we get back to you.'
-        pr-message: 'Hello @${{ github.actor }}, We love Pull Requests! Thank you for contributing.'
+      - uses: actions/first-interaction@v1
+        with:
+          repo-token: ${{ secrets.TEST_TOKEN }}
+          pr-message: 'Adding this ${{ github.event.pull_request.user.login }} to Contributors...'
+          issue-message: 'Adding this ${{ github.event.issue.user.login }} to Contributors...'
