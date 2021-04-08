@@ -4,7 +4,6 @@ on:
   pull_request_target:
     paths:
     - '**.md'
-
 jobs:
   link-check:
     runs-on: ubuntu-latest
