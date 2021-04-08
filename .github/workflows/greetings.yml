@@ -1,6 +1,6 @@
 name: Greetings
 
-on: [pull_request, issues]
+on: [pull_request, issues, merge]
 
 jobs:
   greeting:
@@ -11,3 +11,4 @@ jobs:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
         issue-message: 'Hello @${{ github.actor }}, Thank you for generating an issue to this project! Please wait while we get back to you.'
         pr-message: 'Hello @${{ github.actor }}, We love Pull Requests! Thank you for contributing.'
+        merge-message: 'Yayy!!!'
