@@ -1,7 +1,7 @@
 name: Labeling new issue
 on:
   issues:
-    types: ['opened']
+    types: ['opened','edited']
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -10,4 +10,4 @@ jobs:
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           ignore-comments: true
-          labels-synonyms: '{"gssoc2021":["GSSOC","GSSOC21","gssoc","Gssoc","GSSoC","gssoc21","gssoc2021","GSSOC2021"]}'
+          labels-synonyms: '{"GSSOC21":["GSSOC","GSSOC21","gssoc","Gssoc","GSSoC","gssoc21","gssoc2021","GSSOC2021","GSSoC21"]}'
