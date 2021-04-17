@@ -10,4 +10,4 @@ jobs:
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           ignore-comments: true
-          labels-synonyms: '{"GSSOC21":["GSSOC","GSSOC21","gssoc","Gssoc","GSSoC","gssoc21","gssoc2021","GSSOC2021","GSSoC21"]}'
+          labels-synonyms: '{"gssoc2021":["GSSOC","GSSOC21","gssoc","Gssoc","GSSoC","gssoc21","gssoc2021","GSSOC2021"]}'
