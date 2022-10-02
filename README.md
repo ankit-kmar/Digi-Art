@@ -1,6 +1,6 @@
-# Hacktoberfest-2021
+# Hacktoberfest-2022
 An Open Source repository to collect the creative illustrations made by creative & talented people out there.
-# Hacktoberfest-2021
+# Hacktoberfest-2022
 
 ![homepage](banner.jpeg)
 
